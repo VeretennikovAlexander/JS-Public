@@ -45,7 +45,7 @@ https://karmazzin.gitbook.io/eloquentjavascript_ru
 Поиск и обработка ошибок.
 Регулярные выражения.
 
-Древняя документация Microsoft скачанная с их сайта. Описание базовых объектов и их методов.
+Древняя документация Microsoft скачанная с их сайта (архивная копия публично доступного файла). Описание базовых объектов и их методов.
 
 https://github.com/VeretennikovAlexander/JS-Public/blob/master/Resources/script56.chm
 
