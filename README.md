@@ -46,6 +46,7 @@ https://karmazzin.gitbook.io/eloquentjavascript_ru
 Регулярные выражения.
 
 Древняя документация Microsoft скачанная с их сайта (архивная копия публично доступного файла). Описание базовых объектов и их методов.
+То что касается Windows Script Host можно не смотреть.
 
 https://github.com/VeretennikovAlexander/JS-Public/blob/master/Resources/script56.chm
 
