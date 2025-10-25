@@ -12,6 +12,10 @@ https://nodejs.org/en
 
 Среды разработки: Geany, Visual Studio Code, Visual Studio, и др.
 
+После сдачи код задачи отправлять на alexander@veretennikov.ru.
+
+К задаче прилагается ReadMe.txt с описанием программы, ФИО, группа.
+
 # Список литературы
 
 https://developer.mozilla.org/ru/JavaScript
@@ -39,7 +43,7 @@ https://karmazzin.gitbook.io/eloquentjavascript_ru
 Поиск и обработка ошибок.
 Регулярные выражения.
 
-Стандарты оформления кода, на русском:
+# Стандарты оформления кода
 
 Код программы должным быть структурирован и хорошо оформлен.
 
@@ -61,7 +65,7 @@ JQuery JavaScript Style Guide
 
 https://contribute.jquery.org/style-guide/js/
 
-Статьи:
+# Статьи
 
 Shannon C. E. A Mathematical Theory of Communication (англ.) // Bell System Technical Journal[en] : журнал. — 1948. — Vol. 27. — P. 379—423.
 
