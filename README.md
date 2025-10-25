@@ -2,6 +2,8 @@
 
 См. также
 
+Подписывайтесь сюда. Могут быть объявления о переносе пар и прочее.
+
 https://vk.com/osfirst
 
 https://github.com/VeretennikovAlexander/AboutMe/blob/master/README.md
