@@ -65,6 +65,12 @@ JQuery JavaScript Style Guide
 
 https://contribute.jquery.org/style-guide/js/
 
+# Дополнительно
+
+Принципы фон Неймана
+
+https://vk.com/wall-227225018_2
+
 # Статьи
 
 Shannon C. E. A Mathematical Theory of Communication (англ.) // Bell System Technical Journal[en] : журнал. — 1948. — Vol. 27. — P. 379—423.
