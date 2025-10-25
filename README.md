@@ -81,6 +81,10 @@ https://vk.com/wall-227225018_2
 
 Shannon C. E. A Mathematical Theory of Communication (англ.) // Bell System Technical Journal[en] : журнал. — 1948. — Vol. 27. — P. 379—423.
 
+https://web.archive.org/web/19980715013250/http://cm.bell-labs.com/cm/ms/what/shannonday/shannon1948.pdf
+
+https://en.wikipedia.org/wiki/A_Mathematical_Theory_of_Communication
+
 Русский перевод: Шеннон К. Э. Математическая теория связи // Работы по теории информации и кибернетике / Пер. С. Карпова. — М.: ИИЛ, 1963. — 830 с.
 
 Стандарт IEEE 754
