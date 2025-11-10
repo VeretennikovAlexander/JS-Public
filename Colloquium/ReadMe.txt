@@ -27,3 +27,6 @@ String
 
 См. также
 script56.chm
+
+См. также
+https://html-preview.github.io/?url=https://github.com/VeretennikovAlexander/JS-Public/blob/master/Colloquium/Examples.html
