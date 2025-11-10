@@ -1,3 +1,5 @@
+См. где и когда будет мероприятие в https://vk.com/osfirst
+
 Изучить методы и особенности встроенных объектов Javascript:
 https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects
 
