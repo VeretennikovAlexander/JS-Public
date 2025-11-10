@@ -1,0 +1,1294 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<style type="text/css">
+td{font-family:Franklin Gothic Book; font-size:10pt}
+p{font-family:Franklin Gothic Book; font-size:10pt}
+</style>
+</HEAD>
+<BODY>
+<P STYLE='font-size:25'><B>Array</B></P>
+<P><B>Array.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>a = new Array()
+a[999999999999]=1
+WScript.Echo(a.length)
+a[0]=1
+WScript.Echo(a.length)
+a[10]=1
+WScript.Echo(a.length)
+
+</PRE>
+</TD>
+<TD>
+<PRE>0
+1
+11
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>Судя по всему Array воспринимает как индекс только 32-битные целые числа.</P>
+<P><B>array10.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>function b(){return 67}
+a = new Array(b)
+WScript.Echo(a.length) //1
+</PRE>
+</TD>
+<TD>
+<PRE>1
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>array11.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>var a = [1,2, "asdf", null, 3,4,5];
+// что будет выдано на экран, если написать так:
+WScript.Echo(a.reverse);
+</PRE>
+</TD>
+<TD>
+<PRE>[Function: reverse]
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>Функция без скобок. Выведет текст функции.</P>
+<P><B>array12.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>a = [100,200,300]
+
+WScript.Echo(a.toString(2))</PRE>
+</TD>
+<TD>
+<PRE>100,200,300
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>toString(2) - параметр используется только для чисел. Для массива ничего не делает.</P>
+<P><B>array13.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>a = new Array()
+a["10"] = 1
+WScript.echo(a.length)</PRE>
+</TD>
+<TD>
+<PRE>11
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>"10" как 10</P>
+<P><B>array2.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>var a = new Array(10)
+WScript.Echo(a.length)</PRE>
+</TD>
+<TD>
+<PRE>10
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>Используется конструктор массива arrayObj  = new Array(size) 
+</P>
+<P><B>array3.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>var a = new Array("10")
+WScript.Echo(a.length)
+</PRE>
+</TD>
+<TD>
+<PRE>1
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>Используется конструктор массива new Array([element0[, element1[, ...[, elementN]]]]),
+конструктор arrayObj  = new Array(size) не подхватывается, т. к. аргумент - не число.
+</P>
+<P><B>array4.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>var a = new Array(016)
+WScript.Echo(a.length)
+</PRE>
+</TD>
+<TD>
+<PRE>14
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>016 - число в 8-ричной системе исчисления.</P>
+<P><B>array5.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>var a = new Array(-1) //error
+WScript.Echo(a.length)
+</PRE>
+</TD>
+<TD>
+<PRE>I:\Temp\Temp.js:13
+var a = new Array(-1) &#x2F;/error
+        ^
+RangeError: Invalid array length
+    at Object.&lt;anonymous&gt; (I:\Temp\Temp.js:13:9)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Function.Module.runMain (module.js:501:10)
+    at startup (node.js:129:16)
+    at node.js:814:3
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>Используется конструктор массива arrayObj  = new Array(size) 
+Однако, т. к. число меньше нуля, возникает ошибка.</P>
+<P><B>array6.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>var a = new Array(a)
+WScript.Echo(a.length)
+WScript.Echo(typeof a)
+WScript.Echo(typeof a[1])
+
+</PRE>
+</TD>
+<TD>
+<PRE>1
+object
+undefined
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>Переменная a - которая передается в массив - не определена (undefined)</P>
+<P><B>array7.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>var a = new Array(Number.NaN) //error
+
+
+</PRE>
+</TD>
+<TD>
+<PRE>I:\Temp\Temp.js:13
+var a = new Array(Number.NaN) &#x2F;/error
+        ^
+RangeError: Invalid array length
+    at Object.&lt;anonymous&gt; (I:\Temp\Temp.js:13:9)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Function.Module.runMain (module.js:501:10)
+    at startup (node.js:129:16)
+    at node.js:814:3
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>Используется конструктор массива arrayObj  = new Array(size) 
+Однако, т. к. число не нормальное - возникает ошибка.</P>
+<P><B>array8.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>var a = new Array()
+a[0] = 1
+a[1] = a
+a[2] = 2
+WScript.Echo(a)
+WScript.Echo(a[1]) //same as a
+
+
+
+</PRE>
+</TD>
+<TD>
+<PRE>[ 1, [Circular], 2 ]
+[ 1, [Circular], 2 ]
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>Массив записывается в ячейку как ссылка, а не как значение.</P>
+<P><B>array9.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>var a = new Array(99999999999999999999999999999) //error
+
+
+</PRE>
+</TD>
+<TD>
+<PRE>I:\Temp\Temp.js:13
+var a = new Array(99999999999999999999999999999) &#x2F;/error
+        ^
+RangeError: Invalid array length
+    at Object.&lt;anonymous&gt; (I:\Temp\Temp.js:13:9)
+    at Module._compile (module.js:460:26)
+    at Object.Module._extensions..js (module.js:478:10)
+    at Module.load (module.js:355:32)
+    at Function.Module._load (module.js:310:12)
+    at Function.Module.runMain (module.js:501:10)
+    at startup (node.js:129:16)
+    at node.js:814:3
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>Используется конструктор массива arrayObj  = new Array(size) 
+Однако, т. к. число не нормальное - возникает ошибка.</P>
+<P><B>array_length.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>a = [1,2,3]
+a.length=2
+WScript.echo(a)
+WScript.echo(a.length)</PRE>
+</TD>
+<TD>
+<PRE>[ 1, 2 ]
+2
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>Array_Pop.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>a = [10]
+a.push(1)
+WScript.echo(a.pop())</PRE>
+</TD>
+<TD>
+<PRE>1
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>Вопрос - в какой версии появились методы push,pop.
+
+Ответ - 5.5.</P>
+<P><B>array_sort.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>a = [1,2,-4,4,76,6,10]
+a.sort()
+
+WScript.Echo(a)
+
+a.sort(sort)
+
+function sort(a,b)
+{
+	var as = a+""
+	var bs = b+""
+	return as.localeCompare(bs)
+}
+
+WScript.echo(a)
+</PRE>
+</TD>
+<TD>
+<PRE>[ -4, 1, 10, 2, 4, 6, 76 ]
+[ -4, 1, 10, 2, 4, 6, 76 ]
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P STYLE='font-size:25'><B>Boolean</B></P>
+<P><B>Boolean1.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>var b = new Boolean(1)
+WScript.echo(b)</PRE>
+</TD>
+<TD>
+<PRE>[Boolean: true]
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>Выведет -1, т. к. -1 - это TRUE</P>
+<P STYLE='font-size:25'><B>Date</B></P>
+<P><B>data9.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>WScript.echo(new Date()+1)
+</PRE>
+</TD>
+<TD>
+<PRE>Sat Oct 22 2016 10:21:11 GMT-0700 (Pacific Daylight Time)1
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>строковое представление + "1"</P>
+<P><B>date1.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>WScript.echo(new Date(2000,2000))</PRE>
+</TD>
+<TD>
+<PRE>Mon Sep 01 2166 00:00:00 GMT-0700 (Pacific Daylight Time)
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>2166 год = 2000 год + 2000 месяцев. 2000 / 12 ~ 166.</P>
+<P><B>date2.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>WScript.echo(new Date(2000,-2000))</PRE>
+</TD>
+<TD>
+<PRE>Wed May 01 1833 00:00:00 GMT-0700 (Pacific Daylight Time)
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>1833 год = 2000 год - 2000 месяцев. 2000 / 12 ~ 166.
+</P>
+<P><B>date3.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>WScript.echo(new Date(2000,1,31))</PRE>
+</TD>
+<TD>
+<PRE>Thu Mar 02 2000 00:00:00 GMT-0800 (Pacific Standard Time)
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>2000 - год
+1 - февраль 
+31 - день - переносятся на март.</P>
+<P><B>date4.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>d = new Date()
+d.setYear(10)
+WScript.echo(d)</PRE>
+</TD>
+<TD>
+<PRE>Sat Oct 22 1910 10:21:12 GMT-0700 (Pacific Daylight Time)
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>setYear прибавляет к заданному году 1900.</P>
+<P><B>date5.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>d = new Date()
+d.setFullYear(10)
+WScript.echo(d)</PRE>
+</TD>
+<TD>
+<PRE>Fri Oct 22 10 10:21:13 GMT-0700 (Pacific Daylight Time)
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>date6.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>d = new Date("20-1/10")
+WScript.echo(d)</PRE>
+</TD>
+<TD>
+<PRE>Invalid Date
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>Short dates can use either a "/" or "-" date separator, but must follow the month/day/year format, for example "7/20/96". 
+
+Получается - 1911 год.
+</P>
+<P><B>date7.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>WScript.Echo(new Date(NaN))</PRE>
+</TD>
+<TD>
+<PRE>Invalid Date
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>date8.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>d = new Date(1925,0)
+WScript.echo(d.getYear())
+d = new Date(925,0)
+WScript.echo(d.getYear())
+d = new Date(1925,0)
+WScript.echo(d.getFullYear())
+d = new Date(925,0)
+WScript.echo(d.getFullYear())</PRE>
+</TD>
+<TD>
+<PRE>25
+-975
+1925
+925
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P STYLE='font-size:25'><B>Function</B></P>
+<P><B>function1.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>function func(a)
+{
+}
+
+WScript.echo(func.length)</PRE>
+</TD>
+<TD>
+<PRE>1
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>length возвращает число аргументов.</P>
+<P><B>function2.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>function test(a)
+{
+}
+
+test.call(1)</PRE>
+</TD>
+<TD>
+<PRE></PRE>
+</TD>
+</TR>
+</TABLE>
+<P>В какой версии появился метод call - в 5.5.</P>
+<P STYLE='font-size:25'><B>Global</B></P>
+<P><B>global.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>function Test(s)
+{
+	WScript.echo(s+" : "+eval(s))
+}
+
+Test("parseInt('77ab')")
+Test("new Number('77ab')")
+
+Test("parseInt('ab77')")
+Test("new Number('ab77')")
+
+Test("parseInt('077')")
+Test("new Number('077')")
+</PRE>
+</TD>
+<TD>
+<PRE>parseInt('77ab') : 77
+new Number('77ab') : NaN
+parseInt('ab77') : NaN
+new Number('ab77') : NaN
+parseInt('077') : 77
+new Number('077') : 77
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>global2.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>var declared;                         //Declare variable.
+if (declared == undefined)            //Test variable.
+  WScript.Echo("declared has not been given a value.");
+
+if (typeof(notDeclared) == "undefined")
+  WScript.Echo("notDeclared has not been defined.");
+</PRE>
+</TD>
+<TD>
+<PRE>declared has not been given a value.
+notDeclared has not been defined.
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>Как проверить что переменная никогда не определялась?</P>
+<P><B>global3.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>a = NaN
+
+WScript.Echo(isNaN(a)) //Global object
+WScript.Echo(a==a)</PRE>
+</TD>
+<TD>
+<PRE>true
+false
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>2 способа проверки на NaN.</P>
+<P STYLE='font-size:25'><B>Number</B></P>
+<P><B>number.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>a = Number.MAX_VALUE
+WScript.echo(a)
+b = a+1
+WScript.echo(a+" "+b)
+
+WScript.echo(b == a)
+
+WScript.echo(a.toFixed())</PRE>
+</TD>
+<TD>
+<PRE>1.7976931348623157e+308
+1.7976931348623157e+308 1.7976931348623157e+308
+true
+1.7976931348623157e+308
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>number1.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>a = new Number("abc")
+WScript.echo(a)
+a = parseInt("abc")
+WScript.echo(a)</PRE>
+</TD>
+<TD>
+<PRE>[Number: NaN]
+NaN
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>number2.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>var a = Number.NaN
+WScript.echo(isNaN(a))
+WScript.echo(a == a)</PRE>
+</TD>
+<TD>
+<PRE>true
+false
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>number3.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>function Test(s)
+{
+	WScript.echo(s+" : "+eval(s))
+}
+
+Test("parseInt('77ab')")
+Test("new Number('77ab')")
+
+Test("parseInt('ab77')")
+Test("new Number('ab77')")
+
+Test("parseInt('077')")
+Test("new Number('077')")
+
+Test("parseInt('0128')")
+Test("new Number('0128')")
+
+WScript.echo(077)
+WScript.echo(018)
+</PRE>
+</TD>
+<TD>
+<PRE>parseInt('77ab') : 77
+new Number('77ab') : NaN
+parseInt('ab77') : NaN
+new Number('ab77') : NaN
+parseInt('077') : 77
+new Number('077') : 77
+parseInt('0128') : 128
+new Number('0128') : 128
+63
+18
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>number4.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>a = Number.NEGATIVE_INFINITY + Number.POSITIVE_INFINITY
+WScript.Echo(a)
+a = Number.POSITIVE_INFINITY + Number.NEGATIVE_INFINITY
+WScript.Echo(a)
+
+a = Number.MAX_VALUE * Number.MIN_VALUE
+WScript.Echo(a)
+a = Number.NEGATIVE_INFINITY * Number.POSITIVE_INFINITY
+WScript.Echo(a)
+a = -Number.MAX_VALUE
+WScript.Echo(a)
+a = Number.NEGATIVE_INFINITY * (-1)
+WScript.Echo(a)</PRE>
+</TD>
+<TD>
+<PRE>NaN
+NaN
+8.881784197001251e-16
+-Infinity
+-1.7976931348623157e+308
+Infinity
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>number5.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>a = 100
+WScript.Echo(a.toString(2))</PRE>
+</TD>
+<TD>
+<PRE>1100100
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>number6.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>a = 081
+WScript.Echo(a)
+a = 071
+WScript.Echo(a)
+a = 018
+WScript.Echo(a)
+</PRE>
+</TD>
+<TD>
+<PRE>81
+57
+18
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>Если число насинается на 0 - это 8-ричная система. Но, если содержит 8 - то уже 10-ная.</P>
+<P STYLE='font-size:25'><B>Object</B></P>
+<P><B>Object1.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>a = {1:2,1:3,2:1}
+
+WScript.echo(a[1])
+WScript.echo(a[2])
+WScript.echo(a[3])
+
+</PRE>
+</TD>
+<TD>
+<PRE>3
+1
+undefined
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P STYLE='font-size:25'><B>String</B></P>
+<P><B>string1.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>Text = "Hello world"
+WScript.echo(Text.substr(1,10))
+//If length is zero or negative, an empty string is returned. 
+//If not specified, the substring continues to the end of stringvar.
+WScript.echo(Text.substr(1,-10))
+</PRE>
+</TD>
+<TD>
+<PRE>ello world
+
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>string2.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>Text = "Hello world"
+
+function Test(s)
+{
+	WScript.echo(Text+" : "+s+" : "+eval(s))
+}
+
+Test("Text.search(/LL/i)")
+Test("Text.search(/L$/i)")
+
+//\B Matches a nonword boundary. 'er\B' matches the 'er' in "verb" but not the 'er' in "never". 
+Test("Text.search(/o\\B/i)")
+
+Test("Text.search(/o/i)")
+Test("Text.replace(/lo|or/ig,'R')")
+Test("Text.replace(/lo|or/i,'R')")
+Test("Text.replace('o','R')")
+Test("Text.replace('o','R').replace('o','R')")
+</PRE>
+</TD>
+<TD>
+<PRE>Hello world : Text.search(&#x2F;LL/i) : 2
+Hello world : Text.search(/L$/i) : -1
+Hello world : Text.search(/o\B/i) : 7
+Hello world : Text.search(/o/i) : 4
+Hello world : Text.replace(/lo|or/ig,'R') : HelR wRld
+Hello world : Text.replace(/lo|or/i,'R') : HelR world
+Hello world : Text.replace('o','R') : HellR world
+Hello world : Text.replace('o','R').replace('o','R') : HellR wRrld
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>string3.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>Text = "Hello world"
+WScript.echo(Text.slice(1,-1))
+</PRE>
+</TD>
+<TD>
+<PRE>ello worl
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>string4.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>a = "A"
+b = "B"
+a.test = 10
+
+WScript.echo(a.test)</PRE>
+</TD>
+<TD>
+<PRE>undefined
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>string5.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>a = "asdf";
+a.length = 2;
+WSH.Echo(a);
+WSH.Echo(a.length);</PRE>
+</TD>
+<TD>
+<PRE>asdf
+4
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P>Свойство length только для чтения.</P>
+<P><B>string6.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>Text = "Hello world"
+//The substring method uses the lower value of start and end 
+//as the beginning point of the substring
+WScript.echo(Text.substring(10,1))
+//If either start or end is NaN or negative, it is replaced with zero
+WScript.echo(Text.substring(-100,10))
+</PRE>
+</TD>
+<TD>
+<PRE>ello worl
+Hello worl
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>string7.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>Text = "Hello world"
+WScript.echo(Text.slice(1,9))
+WScript.echo(Text.slice(1,-9))
+//If start is negative, it is treated as 
+//length + start where length is the length of the string
+WScript.echo(Text.slice(-9,-7))
+WScript.echo(Text.slice(10,1))
+</PRE>
+</TD>
+<TD>
+<PRE>ello wor
+e
+ll
+
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+</BODY>
+</HTML>
