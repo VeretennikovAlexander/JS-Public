@@ -22,11 +22,11 @@ p{font-family:Franklin Gothic Book; font-size:10pt}
 <TD>
 <PRE>a = new Array()
 a[999999999999]=1
-WScript.Echo(a.length)
+console.log(a.length)
 a[0]=1
-WScript.Echo(a.length)
+console.log(a.length)
 a[10]=1
-WScript.Echo(a.length)
+console.log(a.length)
 
 </PRE>
 </TD>
@@ -53,7 +53,7 @@ WScript.Echo(a.length)
 <TD>
 <PRE>function b(){return 67}
 a = new Array(b)
-WScript.Echo(a.length) //1
+console.log(a.length) //1
 </PRE>
 </TD>
 <TD>
@@ -77,7 +77,7 @@ WScript.Echo(a.length) //1
 <TD>
 <PRE>var a = [1,2, "asdf", null, 3,4,5];
 // что будет выдано на экран, если написать так:
-WScript.Echo(a.reverse);
+console.log(a.reverse);
 </PRE>
 </TD>
 <TD>
@@ -101,7 +101,7 @@ WScript.Echo(a.reverse);
 <TD>
 <PRE>a = [100,200,300]
 
-WScript.Echo(a.toString(2))</PRE>
+console.log(a.toString(2))</PRE>
 </TD>
 <TD>
 <PRE>100,200,300
@@ -124,7 +124,7 @@ WScript.Echo(a.toString(2))</PRE>
 <TD>
 <PRE>a = new Array()
 a["10"] = 1
-WScript.echo(a.length)</PRE>
+console.log(a.length)</PRE>
 </TD>
 <TD>
 <PRE>11
@@ -146,10 +146,14 @@ WScript.echo(a.length)</PRE>
 <TR>
 <TD>
 <PRE>var a = new Array(10)
-WScript.Echo(a.length)</PRE>
+console.log(a.length)
+
+var a = new Array(10,12)
+console.log(a.length)</PRE>
 </TD>
 <TD>
 <PRE>10
+2
 </PRE>
 </TD>
 </TR>
@@ -169,7 +173,7 @@ WScript.Echo(a.length)</PRE>
 <TR>
 <TD>
 <PRE>var a = new Array("10")
-WScript.Echo(a.length)
+console.log(a.length)
 </PRE>
 </TD>
 <TD>
@@ -194,7 +198,7 @@ WScript.Echo(a.length)
 <TR>
 <TD>
 <PRE>var a = new Array(016)
-WScript.Echo(a.length)
+console.log(a.length)
 </PRE>
 </TD>
 <TD>
@@ -217,22 +221,22 @@ WScript.Echo(a.length)
 <TR>
 <TD>
 <PRE>var a = new Array(-1) //error
-WScript.Echo(a.length)
+console.log(a.length)
 </PRE>
 </TD>
 <TD>
-<PRE>I:\Temp\Temp.js:13
+<PRE>A:\Temp1\Temp.js:1
 var a = new Array(-1) &#x2F;/error
         ^
+
 RangeError: Invalid array length
-    at Object.&lt;anonymous&gt; (I:\Temp\Temp.js:13:9)
-    at Module._compile (module.js:460:26)
-    at Object.Module._extensions..js (module.js:478:10)
-    at Module.load (module.js:355:32)
-    at Function.Module._load (module.js:310:12)
-    at Function.Module.runMain (module.js:501:10)
-    at startup (node.js:129:16)
-    at node.js:814:3
+    at Object.&lt;anonymous&gt; (A:\Temp1\Temp.js:1:9)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
 </PRE>
 </TD>
 </TR>
@@ -252,9 +256,9 @@ RangeError: Invalid array length
 <TR>
 <TD>
 <PRE>var a = new Array(a)
-WScript.Echo(a.length)
-WScript.Echo(typeof a)
-WScript.Echo(typeof a[1])
+console.log(a.length)
+console.log(typeof a)
+console.log(typeof a[1])
 
 </PRE>
 </TD>
@@ -285,18 +289,18 @@ undefined
 </PRE>
 </TD>
 <TD>
-<PRE>I:\Temp\Temp.js:13
+<PRE>A:\Temp1\Temp.js:1
 var a = new Array(Number.NaN) &#x2F;/error
         ^
+
 RangeError: Invalid array length
-    at Object.&lt;anonymous&gt; (I:\Temp\Temp.js:13:9)
-    at Module._compile (module.js:460:26)
-    at Object.Module._extensions..js (module.js:478:10)
-    at Module.load (module.js:355:32)
-    at Function.Module._load (module.js:310:12)
-    at Function.Module.runMain (module.js:501:10)
-    at startup (node.js:129:16)
-    at node.js:814:3
+    at Object.&lt;anonymous&gt; (A:\Temp1\Temp.js:1:9)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
 </PRE>
 </TD>
 </TR>
@@ -319,8 +323,8 @@ RangeError: Invalid array length
 a[0] = 1
 a[1] = a
 a[2] = 2
-WScript.Echo(a)
-WScript.Echo(a[1]) //same as a
+console.log(a)
+console.log(a[1]) //same as a
 
 
 
@@ -352,18 +356,18 @@ WScript.Echo(a[1]) //same as a
 </PRE>
 </TD>
 <TD>
-<PRE>I:\Temp\Temp.js:13
+<PRE>A:\Temp1\Temp.js:1
 var a = new Array(99999999999999999999999999999) &#x2F;/error
         ^
+
 RangeError: Invalid array length
-    at Object.&lt;anonymous&gt; (I:\Temp\Temp.js:13:9)
-    at Module._compile (module.js:460:26)
-    at Object.Module._extensions..js (module.js:478:10)
-    at Module.load (module.js:355:32)
-    at Function.Module._load (module.js:310:12)
-    at Function.Module.runMain (module.js:501:10)
-    at startup (node.js:129:16)
-    at node.js:814:3
+    at Object.&lt;anonymous&gt; (A:\Temp1\Temp.js:1:9)
+    at Module._compile (internal/modules/cjs/loader.js:959:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)
+    at Module.load (internal/modules/cjs/loader.js:815:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:727:14)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)
+    at internal/main/run_main_module.js:17:11
 </PRE>
 </TD>
 </TR>
@@ -384,8 +388,8 @@ RangeError: Invalid array length
 <TD>
 <PRE>a = [1,2,3]
 a.length=2
-WScript.echo(a)
-WScript.echo(a.length)</PRE>
+console.log(a)
+console.log(a.length)</PRE>
 </TD>
 <TD>
 <PRE>[ 1, 2 ]
@@ -409,7 +413,7 @@ WScript.echo(a.length)</PRE>
 <TD>
 <PRE>a = [10]
 a.push(1)
-WScript.echo(a.pop())</PRE>
+console.log(a.pop())</PRE>
 </TD>
 <TD>
 <PRE>1
@@ -417,9 +421,7 @@ WScript.echo(a.pop())</PRE>
 </TD>
 </TR>
 </TABLE>
-<P>Вопрос - в какой версии появились методы push,pop.
-
-Ответ - 5.5.</P>
+<P></P>
 <P><B>array_sort.js</B></P>
 <TABLE BORDER=1>
 <TR>
@@ -435,51 +437,36 @@ WScript.echo(a.pop())</PRE>
 <PRE>a = [1,2,-4,4,76,6,10]
 a.sort()
 
-WScript.Echo(a)
+console.log(a)
 
 a.sort(sort)
 
 function sort(a,b)
 {
-	var as = a+""
-	var bs = b+""
-	return as.localeCompare(bs)
+	a = Number(a)
+	b = Number(b)
+	if (b > a) return 1
+	if (b < a) return -1
+	return 0
 }
 
-WScript.echo(a)
+console.log(a)
 </PRE>
 </TD>
 <TD>
-<PRE>[ -4, 1, 10, 2, 4, 6, 76 ]
-[ -4, 1, 10, 2, 4, 6, 76 ]
+<PRE>[
+  -4, 1, 10, 2,
+   4, 6, 76
+]
+[
+  76, 10,  6, 4,
+   2,  1, -4
+]
 </PRE>
 </TD>
 </TR>
 </TABLE>
 <P></P>
-<P STYLE='font-size:25'><B>Boolean</B></P>
-<P><B>Boolean1.js</B></P>
-<TABLE BORDER=1>
-<TR>
-<TD>
-Скрипт
-</TD>
-<TD>
-Результат
-</TD>
-</TR>
-<TR>
-<TD>
-<PRE>var b = new Boolean(1)
-WScript.echo(b)</PRE>
-</TD>
-<TD>
-<PRE>[Boolean: true]
-</PRE>
-</TD>
-</TR>
-</TABLE>
-<P>Выведет -1, т. к. -1 - это TRUE</P>
 <P STYLE='font-size:25'><B>Date</B></P>
 <P><B>data9.js</B></P>
 <TABLE BORDER=1>
@@ -493,11 +480,11 @@ WScript.echo(b)</PRE>
 </TR>
 <TR>
 <TD>
-<PRE>WScript.echo(new Date()+1)
+<PRE>console.log(new Date()+1)
 </PRE>
 </TD>
 <TD>
-<PRE>Sat Oct 22 2016 10:21:11 GMT-0700 (Pacific Daylight Time)1
+<PRE>Thu Nov 20 2025 14:02:33 GMT+0500 (Yekaterinburg Standard Time)1
 </PRE>
 </TD>
 </TR>
@@ -515,10 +502,10 @@ WScript.echo(b)</PRE>
 </TR>
 <TR>
 <TD>
-<PRE>WScript.echo(new Date(2000,2000))</PRE>
+<PRE>console.log(new Date(2000,2000))</PRE>
 </TD>
 <TD>
-<PRE>Mon Sep 01 2166 00:00:00 GMT-0700 (Pacific Daylight Time)
+<PRE>2166-08-31T19:00:00.000Z
 </PRE>
 </TD>
 </TR>
@@ -536,10 +523,10 @@ WScript.echo(b)</PRE>
 </TR>
 <TR>
 <TD>
-<PRE>WScript.echo(new Date(2000,-2000))</PRE>
+<PRE>console.log(new Date(2000,-2000))</PRE>
 </TD>
 <TD>
-<PRE>Wed May 01 1833 00:00:00 GMT-0700 (Pacific Daylight Time)
+<PRE>1833-04-30T19:57:27.000Z
 </PRE>
 </TD>
 </TR>
@@ -558,10 +545,10 @@ WScript.echo(b)</PRE>
 </TR>
 <TR>
 <TD>
-<PRE>WScript.echo(new Date(2000,1,31))</PRE>
+<PRE>console.log(new Date(2000,1,31))</PRE>
 </TD>
 <TD>
-<PRE>Thu Mar 02 2000 00:00:00 GMT-0800 (Pacific Standard Time)
+<PRE>2000-03-01T19:00:00.000Z
 </PRE>
 </TD>
 </TR>
@@ -583,10 +570,10 @@ WScript.echo(b)</PRE>
 <TD>
 <PRE>d = new Date()
 d.setYear(10)
-WScript.echo(d)</PRE>
+console.log(d)</PRE>
 </TD>
 <TD>
-<PRE>Sat Oct 22 1910 10:21:12 GMT-0700 (Pacific Daylight Time)
+<PRE>1910-11-20T10:00:01.066Z
 </PRE>
 </TD>
 </TR>
@@ -606,10 +593,10 @@ WScript.echo(d)</PRE>
 <TD>
 <PRE>d = new Date()
 d.setFullYear(10)
-WScript.echo(d)</PRE>
+console.log(d)</PRE>
 </TD>
 <TD>
-<PRE>Fri Oct 22 10 10:21:13 GMT-0700 (Pacific Daylight Time)
+<PRE>0010-11-20T10:00:01.316Z
 </PRE>
 </TD>
 </TR>
@@ -627,19 +614,16 @@ WScript.echo(d)</PRE>
 </TR>
 <TR>
 <TD>
-<PRE>d = new Date("20-1/10")
-WScript.echo(d)</PRE>
+<PRE>d = new Date(0)
+console.log(d)</PRE>
 </TD>
 <TD>
-<PRE>Invalid Date
+<PRE>1970-01-01T00:00:00.000Z
 </PRE>
 </TD>
 </TR>
 </TABLE>
-<P>Short dates can use either a "/" or "-" date separator, but must follow the month/day/year format, for example "7/20/96". 
-
-Получается - 1911 год.
-</P>
+<P></P>
 <P><B>date7.js</B></P>
 <TABLE BORDER=1>
 <TR>
@@ -652,7 +636,7 @@ WScript.echo(d)</PRE>
 </TR>
 <TR>
 <TD>
-<PRE>WScript.Echo(new Date(NaN))</PRE>
+<PRE>console.log(new Date(NaN))</PRE>
 </TD>
 <TD>
 <PRE>Invalid Date
@@ -674,13 +658,13 @@ WScript.echo(d)</PRE>
 <TR>
 <TD>
 <PRE>d = new Date(1925,0)
-WScript.echo(d.getYear())
+console.log(d.getYear())
 d = new Date(925,0)
-WScript.echo(d.getYear())
+console.log(d.getYear())
 d = new Date(1925,0)
-WScript.echo(d.getFullYear())
+console.log(d.getFullYear())
 d = new Date(925,0)
-WScript.echo(d.getFullYear())</PRE>
+console.log(d.getFullYear())</PRE>
 </TD>
 <TD>
 <PRE>25
@@ -709,7 +693,7 @@ WScript.echo(d.getFullYear())</PRE>
 {
 }
 
-WScript.echo(func.length)</PRE>
+console.log(func.length)</PRE>
 </TD>
 <TD>
 <PRE>1
@@ -741,7 +725,7 @@ test.call(1)</PRE>
 </TD>
 </TR>
 </TABLE>
-<P>В какой версии появился метод call - в 5.5.</P>
+<P></P>
 <P STYLE='font-size:25'><B>Global</B></P>
 <P><B>global.js</B></P>
 <TABLE BORDER=1>
@@ -757,7 +741,7 @@ test.call(1)</PRE>
 <TD>
 <PRE>function Test(s)
 {
-	WScript.echo(s+" : "+eval(s))
+	console.log(s+" : "+eval(s))
 }
 
 Test("parseInt('77ab')")
@@ -796,10 +780,10 @@ new Number('077') : 77
 <TD>
 <PRE>var declared;                         //Declare variable.
 if (declared == undefined)            //Test variable.
-  WScript.Echo("declared has not been given a value.");
+  console.log("declared has not been given a value.");
 
 if (typeof(notDeclared) == "undefined")
-  WScript.Echo("notDeclared has not been defined.");
+  console.log("notDeclared has not been defined.");
 </PRE>
 </TD>
 <TD>
@@ -824,8 +808,8 @@ notDeclared has not been defined.
 <TD>
 <PRE>a = NaN
 
-WScript.Echo(isNaN(a)) //Global object
-WScript.Echo(a==a)</PRE>
+console.log(isNaN(a)) //Global object
+console.log(a==a)</PRE>
 </TD>
 <TD>
 <PRE>true
@@ -834,7 +818,8 @@ false
 </TD>
 </TR>
 </TABLE>
-<P>2 способа проверки на NaN.</P>
+<P>2 способа проверки на NaN.
+(a==a - только если a это NaN, проверка возвращает false)</P>
 <P STYLE='font-size:25'><B>Number</B></P>
 <P><B>number.js</B></P>
 <TABLE BORDER=1>
@@ -849,13 +834,13 @@ false
 <TR>
 <TD>
 <PRE>a = Number.MAX_VALUE
-WScript.echo(a)
+console.log(a)
 b = a+1
-WScript.echo(a+" "+b)
+console.log(a+" "+b)
 
-WScript.echo(b == a)
+console.log(b == a)
 
-WScript.echo(a.toFixed())</PRE>
+console.log(a.toFixed())</PRE>
 </TD>
 <TD>
 <PRE>1.7976931348623157e+308
@@ -880,9 +865,9 @@ true
 <TR>
 <TD>
 <PRE>a = new Number("abc")
-WScript.echo(a)
+console.log(a)
 a = parseInt("abc")
-WScript.echo(a)</PRE>
+console.log(a)</PRE>
 </TD>
 <TD>
 <PRE>[Number: NaN]
@@ -905,8 +890,8 @@ NaN
 <TR>
 <TD>
 <PRE>var a = Number.NaN
-WScript.echo(isNaN(a))
-WScript.echo(a == a)</PRE>
+console.log(isNaN(a))
+console.log(a == a)</PRE>
 </TD>
 <TD>
 <PRE>true
@@ -930,7 +915,7 @@ false
 <TD>
 <PRE>function Test(s)
 {
-	WScript.echo(s+" : "+eval(s))
+	console.log(s+" : "+eval(s))
 }
 
 Test("parseInt('77ab')")
@@ -945,8 +930,8 @@ Test("new Number('077')")
 Test("parseInt('0128')")
 Test("new Number('0128')")
 
-WScript.echo(077)
-WScript.echo(018)
+console.log(077)
+console.log(018)
 </PRE>
 </TD>
 <TD>
@@ -978,18 +963,18 @@ new Number('0128') : 128
 <TR>
 <TD>
 <PRE>a = Number.NEGATIVE_INFINITY + Number.POSITIVE_INFINITY
-WScript.Echo(a)
+console.log(a)
 a = Number.POSITIVE_INFINITY + Number.NEGATIVE_INFINITY
-WScript.Echo(a)
+console.log(a)
 
 a = Number.MAX_VALUE * Number.MIN_VALUE
-WScript.Echo(a)
+console.log(a)
 a = Number.NEGATIVE_INFINITY * Number.POSITIVE_INFINITY
-WScript.Echo(a)
+console.log(a)
 a = -Number.MAX_VALUE
-WScript.Echo(a)
+console.log(a)
 a = Number.NEGATIVE_INFINITY * (-1)
-WScript.Echo(a)</PRE>
+console.log(a)</PRE>
 </TD>
 <TD>
 <PRE>NaN
@@ -1016,7 +1001,7 @@ Infinity
 <TR>
 <TD>
 <PRE>a = 100
-WScript.Echo(a.toString(2))</PRE>
+console.log(a.toString(2))</PRE>
 </TD>
 <TD>
 <PRE>1100100
@@ -1038,11 +1023,11 @@ WScript.Echo(a.toString(2))</PRE>
 <TR>
 <TD>
 <PRE>a = 081
-WScript.Echo(a)
+console.log(a)
 a = 071
-WScript.Echo(a)
+console.log(a)
 a = 018
-WScript.Echo(a)
+console.log(a)
 </PRE>
 </TD>
 <TD>
@@ -1053,7 +1038,29 @@ WScript.Echo(a)
 </TD>
 </TR>
 </TABLE>
-<P>Если число насинается на 0 - это 8-ричная система. Но, если содержит 8 - то уже 10-ная.</P>
+<P>Если число начинается на 0 - это 8-ричная система. Но, если содержит 8 - то уже 10-ная.</P>
+<P><B>number7.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>var num = parseInt("10",2)
+console.log(num)</PRE>
+</TD>
+<TD>
+<PRE>2
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
 <P STYLE='font-size:25'><B>Object</B></P>
 <P><B>Object1.js</B></P>
 <TABLE BORDER=1>
@@ -1069,9 +1076,9 @@ WScript.Echo(a)
 <TD>
 <PRE>a = {1:2,1:3,2:1}
 
-WScript.echo(a[1])
-WScript.echo(a[2])
-WScript.echo(a[3])
+console.log(a[1])
+console.log(a[2])
+console.log(a[3])
 
 </PRE>
 </TD>
@@ -1098,10 +1105,10 @@ undefined
 <TR>
 <TD>
 <PRE>Text = "Hello world"
-WScript.echo(Text.substr(1,10))
+console.log(Text.substr(1,10))
 //If length is zero or negative, an empty string is returned. 
 //If not specified, the substring continues to the end of stringvar.
-WScript.echo(Text.substr(1,-10))
+console.log(Text.substr(1,-10))
 </PRE>
 </TD>
 <TD>
@@ -1128,7 +1135,7 @@ WScript.echo(Text.substr(1,-10))
 
 function Test(s)
 {
-	WScript.echo(Text+" : "+s+" : "+eval(s))
+	console.log(Text+" : "+s+" : "+eval(s))
 }
 
 Test("Text.search(/LL/i)")
@@ -1171,7 +1178,7 @@ Hello world : Text.replace('o','R').replace('o','R') : HellR wRrld
 <TR>
 <TD>
 <PRE>Text = "Hello world"
-WScript.echo(Text.slice(1,-1))
+console.log(Text.slice(1,-1))
 </PRE>
 </TD>
 <TD>
@@ -1197,7 +1204,7 @@ WScript.echo(Text.slice(1,-1))
 b = "B"
 a.test = 10
 
-WScript.echo(a.test)</PRE>
+console.log(a.test)</PRE>
 </TD>
 <TD>
 <PRE>undefined
@@ -1220,8 +1227,8 @@ WScript.echo(a.test)</PRE>
 <TD>
 <PRE>a = "asdf";
 a.length = 2;
-WSH.Echo(a);
-WSH.Echo(a.length);</PRE>
+console.log(a);
+console.log(a.length);</PRE>
 </TD>
 <TD>
 <PRE>asdf
@@ -1246,9 +1253,9 @@ WSH.Echo(a.length);</PRE>
 <PRE>Text = "Hello world"
 //The substring method uses the lower value of start and end 
 //as the beginning point of the substring
-WScript.echo(Text.substring(10,1))
+console.log(Text.substring(10,1))
 //If either start or end is NaN or negative, it is replaced with zero
-WScript.echo(Text.substring(-100,10))
+console.log(Text.substring(-100,10))
 </PRE>
 </TD>
 <TD>
@@ -1272,12 +1279,12 @@ Hello worl
 <TR>
 <TD>
 <PRE>Text = "Hello world"
-WScript.echo(Text.slice(1,9))
-WScript.echo(Text.slice(1,-9))
+console.log(Text.slice(1,9))
+console.log(Text.slice(1,-9))
 //If start is negative, it is treated as 
 //length + start where length is the length of the string
-WScript.echo(Text.slice(-9,-7))
-WScript.echo(Text.slice(10,1))
+console.log(Text.slice(-9,-7))
+console.log(Text.slice(10,1))
 </PRE>
 </TD>
 <TD>
@@ -1285,6 +1292,65 @@ WScript.echo(Text.slice(10,1))
 e
 ll
 
+</PRE>
+</TD>
+</TR>
+</TABLE>
+<P></P>
+<P><B>string8.js</B></P>
+<TABLE BORDER=1>
+<TR>
+<TD>
+Скрипт
+</TD>
+<TD>
+Результат
+</TD>
+</TR>
+<TR>
+<TD>
+<PRE>st = "Hello world"
+
+a = st.match(/lo|or/ig)
+
+console.log(a.index)
+console.log(a.lastIndex)
+console.log(a.input)
+console.log(a.length)
+for (i = 0; i<a.length; i++)
+{
+	console.log(a[i])
+}
+
+
+console.log("Match object")
+
+re = /lo|or/ig
+while (m = re.exec(st))
+{
+	console.log("Position "+m.index+" -> " + m.lastIndex + " / "+m[0])
+}
+
+res = st.replace(/lo|or/ig,function(x){ return "ZZZ"});
+console.log(res)
+
+res = st.replace(new RegExp("lo|or","ig"),function(x){ return "ZZZ"});
+console.log(res)
+
+</PRE>
+</TD>
+<TD>
+<PRE>undefined
+undefined
+undefined
+2
+lo
+or
+Match object
+Position 3 -&gt; undefined &#x2F; lo
+Position 7 -> undefined / or
+HelZZZ wZZZld
+HelZZZ wZZZld
 </PRE>
 </TD>
 </TR>
