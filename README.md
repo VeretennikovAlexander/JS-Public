@@ -6,6 +6,12 @@
 
 https://vk.com/osfirst
 
+Telegram-канал и VK преподавателя
+
+https://t.me/UralDragon
+
+https://vk.com/veretennikov.alexander
+
 https://github.com/VeretennikovAlexander/AboutMe/blob/master/README.md
 
 Используем Node.js
@@ -99,4 +105,10 @@ http://www.softelectro.ru/ieee754.html
 754-2019 - IEEE Standard for Floating-Point Arithmetic (Ограниченный доступ, сам стандарт в IEEE XPlore)
 
 https://ieeexplore.ieee.org/document/8766229
+
+## Алгоритмы поиска подстроки в строке
+
+http://www.algolist.ru/search/esearch/index-2.html
+
+http://www.algolist.ru
 
