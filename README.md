@@ -106,9 +106,66 @@ http://www.softelectro.ru/ieee754.html
 
 https://ieeexplore.ieee.org/document/8766229
 
+См. также
+
+4. Представление чисел с плавающей запятой. Стандарт IEEE 754, в
+https://elar.urfu.ru/handle/10995/31217
+
 ## Алгоритмы поиска подстроки в строке
 
 http://www.algolist.ru/search/esearch/index-2.html
 
 http://www.algolist.ru
 
+## Список задач
+
+# 1. Виртуальная машина (интерпретарор)
+
+# 2. Float (IEEE 754)
+
+Реализация длинной арифметики с плавающей точкой.
+Преобразование из десятичной системы в двоичную,
+сумма двух чисел (или произведение),
+преобразование из двоичной системы в десятичную.
+
+# 3. RLE (для текстов)
+
+https://en.wikipedia.org/wiki/Run-length_encoding
+
+# 4. Энтропия Шеннона
+
+На входе текстовый файл.
+Найти по формуле значение энтропии, вывести на экран.
+
+https://en.wikipedia.org/wiki/Entropy_(information_theory)
+
+# 5. Хаффман
+
+На входе текстовый файл.
+Построить и вывести коды символов + текст в закодированном виде.
+
+https://en.wikipedia.org/wiki/Huffman_coding
+
+# 6. Хемминг
+
+Кодирование Хемминга.
+
+# 7. Хеш. Алгоритм Рабина-Карпа
+
+https://algolist.ru/search/esearch/karp_rab.html
+
+https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm
+
+# 8. Алгоритм поиска с помощью конечного автомата.
+
+https://algolist.ru/search/esearch/aut.html
+
+# 9. Алгоритм поиска Бойера-Мура с эвристикой плохого символа (самый простой вариант).
+
+https://algolist.ru/search/esearch/bm.html
+
+https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm
+
+# 10. Алгоритм Дейкстры, преобразование арифметического выражения в постфиксную запись
+
+https://en.wikipedia.org/wiki/Shunting_yard_algorithm
